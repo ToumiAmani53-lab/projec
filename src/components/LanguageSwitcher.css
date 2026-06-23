@@ -1,0 +1,40 @@
+.lang-switcher {
+  display: flex;
+  gap: 2px;
+  border-radius: var(--radius-md);
+  padding: 2px;
+}
+
+.lang-switcher-light {
+  background: var(--color-line-soft);
+}
+
+.lang-switcher-dark {
+  background: rgba(247, 243, 232, 0.1);
+}
+
+.lang-switcher-btn {
+  border: none;
+  background: transparent;
+  padding: 5px 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--color-ink-soft);
+  transition: all 0.15s ease;
+}
+
+.lang-switcher-dark .lang-switcher-btn {
+  color: rgba(247, 243, 232, 0.7);
+}
+
+.lang-switcher-btn.is-active {
+  background: var(--color-green-deep);
+  color: #fff;
+}
+
+.lang-switcher-dark .lang-switcher-btn.is-active {
+  background: var(--color-wheat);
+  color: var(--color-ink);
+}

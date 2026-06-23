@@ -1,0 +1,140 @@
+:root {
+  /* === Palette === */
+  --color-bg: #F7F3E8;            /* crème terre */
+  --color-bg-raised: #FFFDF7;     /* carte légèrement plus claire */
+  --color-ink: #1A1A14;           /* quasi-noir encre */
+  --color-ink-soft: #5C5848;      /* texte secondaire */
+  --color-green-deep: #2D4A2B;    /* vert cultivé — primaire */
+  --color-green-soft: #4F6B45;
+  --color-clay: #B4673B;          /* terre cuite — accent alerte/CTA */
+  --color-clay-soft: #E8D9C8;
+  --color-wheat: #D9A634;         /* blé mûr — accent récolte */
+  --color-sky: #5B7C99;           /* ciel orageux — météo/eau */
+  --color-sky-soft: #DCE6EC;
+  --color-urgent: #A8402A;
+  --color-warn: #C68A1F;
+  --color-info: #3D6A8A;
+  --color-line: #D8D0BC;          /* hairlines */
+  --color-line-soft: #E8E2D2;
+
+  /* === Typographie === */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* === Échelle === */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  --shadow-card: 0 1px 2px rgba(26, 26, 20, 0.06), 0 4px 12px rgba(26, 26, 20, 0.05);
+  --shadow-raised: 0 2px 4px rgba(26, 26, 20, 0.08), 0 8px 24px rgba(26, 26, 20, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-green-deep);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== Support RTL (arabe) ===== */
+html[dir='rtl'] body {
+  font-family: 'Noto Kufi Arabic', var(--font-body);
+}
+
+html[dir='rtl'] .sf-nav-link,
+html[dir='rtl'] .sf-user-card,
+html[dir='rtl'] .home-brand,
+html[dir='rtl'] .auth-brand,
+html[dir='rtl'] .feature-item,
+html[dir='rtl'] .expert-card,
+html[dir='rtl'] .conversation-item {
+  text-align: right;
+}
+
+html[dir='rtl'] .alert-card {
+  border-left: none;
+  border-right: 3px solid var(--accent);
+  clip-path: polygon(18px 0, 100% 0, 100% 100%, 0 100%, 0 18px);
+}
+
+html[dir='rtl'] .alert-pin {
+  right: auto;
+  left: 10px;
+}
+
+html[dir='rtl'] .back-link svg,
+html[dir='rtl'] .back-link {
+  transform: scaleX(-1);
+}
+
+html[dir='rtl'] .harvest-banner,
+html[dir='rtl'] .about-stat,
+html[dir='rtl'] .hero-card-alert {
+  border-left: none;
+  border-right: 3px solid var(--color-wheat);
+}
+
+html[dir='rtl'] .thread-bubble-self {
+  border-bottom-right-radius: var(--radius-md);
+  border-bottom-left-radius: 4px;
+}
+
+html[dir='rtl'] .thread-bubble-other {
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: 4px;
+}
+
+html[dir='rtl'] .chat-bubble-user {
+  border-bottom-right-radius: var(--radius-md);
+  border-bottom-left-radius: 4px;
+}
+
+html[dir='rtl'] .chat-bubble-assistant {
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: 4px;
+}

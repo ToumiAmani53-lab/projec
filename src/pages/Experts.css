@@ -1,0 +1,66 @@
+.experts-search {
+  max-width: 360px;
+  margin-bottom: var(--space-5);
+}
+
+.experts-page {
+  max-width: 1200px;
+}
+
+.experts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.expert-card {
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.expert-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-green-deep);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 auto var(--space-3);
+}
+
+.expert-card h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  margin: 0 0 var(--space-2);
+}
+
+.expert-specialty-tag {
+  display: inline-block;
+  background: var(--color-clay-soft);
+  color: var(--color-clay);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: var(--space-3);
+}
+
+.expert-bio {
+  font-size: 13.5px;
+  color: var(--color-ink-soft);
+  line-height: 1.5;
+  margin: 0 0 var(--space-4);
+}
+
+.expert-contact-btn {
+  width: 100%;
+}

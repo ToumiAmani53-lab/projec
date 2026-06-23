@@ -1,0 +1,126 @@
+.wp-panel {
+  background: linear-gradient(135deg, var(--color-green-deep) 0%, #1F3A1E 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  color: #F7F3E8;
+  box-shadow: var(--shadow-raised);
+}
+
+.wp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.wp-location {
+  font-size: 13.5px;
+  color: rgba(247, 243, 232, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-2);
+}
+
+.wp-temp {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.wp-temp-unit {
+  font-size: 24px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.wp-condition {
+  font-size: 14.5px;
+  color: rgba(247, 243, 232, 0.85);
+  margin-top: var(--space-1);
+}
+
+.wp-stats-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(247, 243, 232, 0.15);
+}
+
+.wp-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.wp-stat-label {
+  font-size: 11px;
+  color: rgba(247, 243, 232, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.wp-stat-value {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.wp-stat-unit {
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.7;
+  margin-left: 2px;
+}
+
+.wp-forecast {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(247, 243, 232, 0.15);
+  overflow-x: auto;
+}
+
+.wp-forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  flex: 1;
+  min-width: 64px;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  transition: background 0.15s ease;
+}
+
+.wp-forecast-day:hover {
+  background: rgba(247, 243, 232, 0.08);
+}
+
+.wp-forecast-date {
+  font-size: 12px;
+  color: rgba(247, 243, 232, 0.7);
+  text-transform: capitalize;
+}
+
+.wp-forecast-temps {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+.wp-forecast-rain {
+  font-size: 11px;
+  color: rgba(247, 243, 232, 0.65);
+}
+
+@media (max-width: 640px) {
+  .wp-stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+  }
+  .wp-temp {
+    font-size: 42px;
+  }
+}

@@ -1,0 +1,116 @@
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+.article-card {
+  display: block;
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-raised);
+}
+
+.article-category-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-green-deep);
+  background: #E3EBE0;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: var(--space-3);
+}
+
+.article-card h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  margin: 0 0 var(--space-2);
+  color: var(--color-ink);
+}
+
+.article-card p {
+  font-size: 13.5px;
+  color: var(--color-ink-soft);
+  line-height: 1.5;
+  margin: 0 0 var(--space-3);
+}
+
+.article-card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--color-ink-soft);
+  border-top: 1px solid var(--color-line-soft);
+  padding-top: var(--space-3);
+}
+
+/* Détail article */
+.article-detail {
+  max-width: 720px;
+}
+
+.article-detail-header {
+  margin-bottom: var(--space-5);
+}
+
+.article-detail-title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  margin: var(--space-3) 0 var(--space-2);
+}
+
+.article-detail-meta {
+  display: flex;
+  gap: var(--space-3);
+  font-size: 13.5px;
+  color: var(--color-ink-soft);
+  align-items: center;
+}
+
+.article-detail-author {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.article-detail-content {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--color-ink);
+  white-space: pre-wrap;
+}
+
+.article-detail-tags {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.article-tag {
+  background: var(--color-line-soft);
+  color: var(--color-ink-soft);
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Editeur d'article */
+.editor-card {
+  max-width: 720px;
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-card);
+}
